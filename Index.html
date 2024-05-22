@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Buscar (fetch) arquivo de texto</title>
+</head>
+<body>
+    <object id="result">Test a Requisição</object>
+    <div id="result01"></div>
+    <button onclick="fetchData()">buscar dados</button>
+</body>
+<script>
+    function fetchData(){
+        const xhttp = new XMLHttpRequest()
+
+        xhttp.onload = function(){
+            document.getElementById('result01').innerHTML = 'OIIIIE'
+        }
+
+        xhttp.open('GET','test.TXT', true) //assiíncrona
+
+        xhttp.send();
+    }
+</script>
+</html>
